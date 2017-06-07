@@ -1,0 +1,157 @@
+<html> 
+<head>
+    <title>Workshop 3 - M-Soma Bootcamp</title>
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <link href="http://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet" type="text/css">
+</head>
+<body>
+	<div id="container">
+		<div id="header">
+			<div id="header-caption">
+				<div id="header-caption-logo"><img class="img-scaled" src="assets/img/logo.png" /></div>
+				<div id="header-caption-name">M-Soma Bootcamp</div>
+				<div class="clear"></div>
+			</div>
+			<div id="header-content">
+				<!-- ASSIGNMENT NAME -->
+				<div id="header-title">Lab 3</div>
+				<!-- DUE DATE -->
+				<div id="header-due">June 7th, 2017</div>
+				<div class="clear"></div>
+			</div>
+		</div>
+		<div class="section">
+			<div class="info">
+				<!-- ASSIGNMENT TITLE -->
+				<div class="info-title">Positioning</div>
+				<div class="info-content">
+					<!-- REQUIRED TOOLS -->
+					<div class="info-required">Required Tools: Desktop, Google Chrome, text editor of your choice</div>
+					<!-- INTRODUCTION -->
+					<div class="info-intro">In	this hands-on	session,	we	will	create	a	basic	one-page	scroll	landing	page.	When	you	open	up	index.html,	you	will	see	that	the	
+document	is	roughly	divided	into	5	“slides”	– cover,	reach,	discover,	engage,	and	
+footer.	We	will	tackle	the	cover	section	first,	then	go	on	to	the	three	content	slides	
+(reach,	discover,	engage),	and	wrap	up	with	the	footer.</div>
+				</div>
+
+			</div>
+			<div class="body">
+				<p>Our final product will look like this:</p>
+				<img src="assets/img/demo.jpg"><br><br><br><div class = "body-header">Step 1: Cover</div>
+					<p>The	cover	slide	is	divided	into	three	parts	– the	background,	the	content,	and	the	
+navigation.	We	will	try	to	put	the	content	and	the	navigation	on	top	of the	
+background. 
+					</p>
+					<ol>
+						<li><h4>Background</h4> First,	let’s	adjust	the	size	of	the	background.	Add	“width:	100%;	height:	
+500px;”	to #cover-background	so	that	it	doesn’t	cover	the	entire	screen.</li>
+						<li><h4>Content</h4> We	can	now	proceed	to	the	content.	We	will	eventually	vertically	center	
+the	content,	but	first	let’s	assign	it	an	arbitrary	position.	Since	the	content	
+goes	on	top	of background,	add	“position:	absolute;	width:	100%;	top:	
+60px;”	to	#cover-content.
+We	have	“width:	100%;”	because	setting	“position:	absolute”	will	remove	a	
+div	tag’s	natural	property	of	taking	up	as	much	width	as	possible	(which	is	
+typically	your	entire	browser	width.)	As	such,	we	need	to	explicitly	state	
+that	#header	should	take	up	the	entire	width.</li>
+						<li><h4>Typography</h4> Let’s	adjust	some	typography	by	adding	“text-align:	center;	color:	
+white;”	to	#cover-content,	“font-size:	36px;	font-weight:	300;”	to	
+#cover-title,	and	“font-size:	16px;	font-weight:	300;	color:	rgba(255,	
+255,	255,	0.5);	margin-top:	10px;” to	#cover-subtitle.
+“Color:	rgba(255,	255,	255,	0.5)”	will	set	the	color	of	the	subtitle	to	be	white,	
+but	with	50%	opacity,	making	it	look	semi-transparent.</li>
+						<li><h4>Breathing space</h4> If	you	hover	over	#cover-content,	you	will see	that	its	height	is	81px.	To	
+vertically	center	this	element,	change	the	value	of	its	“top”	property	to	
+“50%,”	and	add	“margin-top:	-40px;”	which	will	push	this	element	
+upward	by	roughly	half	of	its	height.</li>
+						<li><h4>Navigation</h4> Moving	on	to	navigation.	For	this	website,	we will	have	a	navigation	that	
+will	stick	to	the	bottom	of	the	cover.	As	such,	we	will	give	it	“position:	
+absolute;	bottom:	0px;	width:	100%;”	to	#cover-nav.	This	will	put	the	
+navigation	on	top	of	the	cover,	and	stick	it	to	the	bottom.</li>
+						<li><h4>Navigation Background</h4> Let’s	give	the	navigation	more	emphasis,	separating	it	from	the	rest	of	the	
+content,	by	adding	“background:	rgba(255,	255,	255,	0.2)	color:	white;	
+padding:	20px	0px;”	to	#cover-nav.	This	will	change	the	background	to	
+20%	opacity	white,	change	the	font	color	to	white,	and	add	vertical	inner	
+spacing	of	20px.</li>
+						<li><h4>Navigation Width</h4> Notice	that	the	content	is	touching	the	edge	of	the	screen.	Add	“width:	
+960px;	margin	0px	auto;”	to	#cover-nav-content.	This	will	add	a	
+maximum	width	for	the	content	inside	the	navigation.</li>
+						<li><h4>Alignment</h4> We	are	now	ready	to	align	elements	horizontally.	Add	“float:	left”	to	
+#cover-nav-title	to	put	the	title	to	the	left	edge,	and	add	“float:	right”	to	
+.cover-nav-item to	put	the	navigation	items	to	the	right	edge.
+We	have	.clear	elements	with	“clear:	both”	CSS	properties	attached	to	them	
+at	the	end	of	a	series	of	floated	elements.	This	is	because	you	must	add	
+“clear:	both”	at	the	end	of	a	series	of	horizontally	stacked	elements;	
+otherwise,	the	browser	will	continue	to	stack	elements	horizontally.	
+Consider	.clear	elements	as	“period	marks.”</li>
+						<li><h4>More Typography</h4> For	some	final	touch,	let’s	tweak	the	typography	by	adding	“font-weight:	
+700;”	to	#cover-nav-title	and	adding	“font-size:	13px;	line-height:	22px;
+margin-left:	30px;”	to	.nav-item.
+We	add	“line-height:	22px;”	because	we	must	make	sure	that	the	text	on	
+.nav-item	align	properly	with	the	title’s	font-size.	If	you	hover	over	#title	
+from	web	inspector,	you	can	see	that	it	takes	up	a	height	of	22px.</li>
+						<li><h4>Navigation Position</h4> Try	to	scroll	your	website.	You	will	see	that	the	navigation	bar	scrolls	
+along	with	the	website.	We	want	the	navigation	bar	to	be	fixed	to	that	
+position.	So	yes,	you	should	add	“position:	fixed;	width:	100%;”	to	
+#header.
+We	have	“width:	100%;”	because	setting	“position:	fixed”	will	remove	a	div	
+tag’s	natural	property	of	taking	up	as	much	width	as	possible	(which	is	
+typically	your	entire	browser	width.)	As	such,	we	need	to	explicitly	state	
+that	#header	should	take	up	the	entire	width.</li>
+					</ol>
+					<br><br>
+				<div class = "body-header">Step 2: Content</div>
+					<p>Whew!	Now	things	will	get	a	little	easier.	Here,	we	will	tweak	the	content	– notice	
+that	we	assigned	these	content	slides	a	class	of	“.slide”	and	ids	of	“#reach,	#discover,	
+#engage.”	We	will	use	ids	to	assign	CSS	attributes	unique	to	each	slide,	and	use	.slide	
+class	to	assign	CSS	attribute	that	apply	to	all	three	of	the	slides.
+					</p>
+					<ol>
+						<li>As	always,	you	almost	never	want	your	content	to	touch	the	edges.	
+Since	this	is	a	landing	page,	let’s	give	ample	vertical	spacing	by	adding	
+“padding:	60px	0px;”	to	.slide.	Then,	give	each	slide	unique	
+background	color	by	adding	“background:	#1abc9c;”	to	#reach,	“background:	#3498db”	to	#discover,	and	“background:	#de6868;”	to	
+#engage.</li>
+						<li>Let’s	set	the	maximum	width	of	the	content	by	adding	“width:	720px;	
+margin:	0px	auto;”	to	.container.</li>
+						<li>The	thumbnail	picture	looks	quite	bad	right	now.	Let’s	give	it	some	
+CSS	magic	by	adding	following	properties	to	.slide-thumbnail:
+						<ul>
+							<li>“width:	240px;	height:	240px;”	– Adjusts	the	size</li>
+							<li>“margin:	0px	auto”	– Horizontal	center</li>
+							<li>“border-radius:	50%;	overflow:	hidden;”	– Change	to	circle</li>
+							<li>“border:	10px	solid	rgba(255,	255,	255,	0.5)”	– Add	50%	
+opacity	white	border	around	the	circle.</li>
+						</ul>
+						</li>
+						<li>Now	let’s	adjust	some	typography.	Improve	the	contrast	and	center	
+the	text	by	adding	“text-align:	center;	color:	white;”	to	.container	to	
+apply	the	changes	to	all	the	text	inside	the	slide.	Then,	add	“font-size:	
+24px;	font-weight:	300;	margin-top:	20px;”	to	.slide-title	and	add	
+“font-size:	13px;	line-height:	24px;	margin-top:	20px;”	to	.slidedescription.
+</li>
+					</ol>
+					<br><br>
+				<div class = "body-header">Step 2: Footer</div>
+				<p>For	the	very	last	touch,	add	“background:	#2f353f;	padding:	10px	0px;	font-size:	
+12px;	font-weight:	700;	text-align:	center;	color:	white;”	to	#footer.	By	now,	you	
+should	understand	what	each	of	these	CSS	properties	would do.	</p>
+				<p>You	are	all	set!	You	can	now	gaze	at	the	beauty	you	created	all	you	want </p>
+		</div>
+	</div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
